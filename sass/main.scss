@@ -1,0 +1,101 @@
+$main: #36395B;
+$darkness: $main;
+
+
+
+
+@use "sass:math";
+@use "sass:color";
+
+
+
+
+@keyframes rotateRight {
+    0%{
+        transform: rotate(0deg) scale(.57);
+    }
+    100% {
+        transform: rotate(360deg) scale(.57);
+    }
+}
+@keyframes rotateLeft {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+html,body {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    background-color: color.scale($darkness, $lightness: -10%);
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+    }
+    & a{
+        text-decoration: none;
+    }
+    
+
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    &_to {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // background-color: white;
+        width: 100vw;
+        height: 52.03125vw;
+        overflow: hidden;
+        &_the {
+            margin-top:-60.55vw;
+            transform: scale(.57);
+            z-index: 1;
+            
+            // margin-top: -50vw;
+            // position: absolute;
+            // opacity: 1;
+            animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
+        }
+        &_show {
+            // transform: scale(.57);
+            height: 47.8vw;
+            margin-top: -110.25vw;
+            // position: relative;
+            z-index: 3;
+            // margin-left: 0vw;
+            // position: absolute;
+            // display: none;
+            animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
+        }
+        &_friend {
+            // transform: scale(.57);
+            z-index: 2;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            height: 49.55vw;
+            // margin-top: -110.25vw;
+            margin-top: -111.05vw;
+            // margin-top: 0.94vw;
+            // position: absolute;
+            
+        }
+    }
+}
+
+
+
+

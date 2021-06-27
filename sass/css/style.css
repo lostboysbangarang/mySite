@@ -1,0 +1,67 @@
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg) scale(0.57);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.57);
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  background-color: #313352;
+}
+html input:focus, html textarea:focus, html select:focus, body input:focus, body textarea:focus, body select:focus {
+  outline: none;
+}
+html a, body a {
+  text-decoration: none;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+.welcome_to {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 52.03125vw;
+  overflow: hidden;
+}
+.welcome_to_the {
+  margin-top: -60.55vw;
+  transform: scale(0.57);
+  z-index: 1;
+  animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
+}
+.welcome_to_show {
+  height: 47.8vw;
+  margin-top: -110.25vw;
+  z-index: 3;
+  animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
+}
+.welcome_to_friend {
+  z-index: 2;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 49.55vw;
+  margin-top: -111.05vw;
+}
+
+/*# sourceMappingURL=style.css.map */
