@@ -32,44 +32,7 @@ html a, body a {
   text-decoration: none;
 }
 
-.welcome {
-  height: 100vh;
-  overflow: hidden;
-}
-.welcome_to {
-  margin-top: -50vw;
-  width: 100vw;
-  height: 52.03125vw;
-  border: 1px red;
-}
-.welcome_to_the {
-  margin-top: 0vw;
-  z-index: 1;
-  width: 175vw;
-  margin-left: -38.1vw;
-  animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
-}
-.welcome_to_show {
-  height: 47.8vw;
-  width: 47.8vw;
-  margin-left: 25.5vw;
-  margin-top: 50vw;
-  z-index: 3;
-  animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
-}
-.welcome_to_friend {
-  z-index: 2;
-  margin-left: 24.5vw;
-  height: 49.55vw;
-  margin-top: 47.25vw;
-}
-
-.spacer {
-  height: 52.03125vw;
-}
-
 .container {
-  height: 52.03125vw;
   overflow: hidden;
   display: flex;
   justify-content: center;

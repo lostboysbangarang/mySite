@@ -29,6 +29,10 @@ $darkness: $main;
 
 
 
+//                                      //
+//  Presets that I like to work with    //
+//                                      //
+
 html,body {
     width: 100%;
     height: 100%;
@@ -49,104 +53,30 @@ html,body {
 
 }
 
-.welcome {
-    // display: flex;
-    // justify-content: center;
-    // height: 52.03125vw;
-    height:100vh;
-    overflow: hidden;
-    &_to {
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        // background-color: white;
-        margin-top: -50vw;
-        width: 100vw;
-        height: 52.03125vw;
-        border: 1px red;
-        
-        // overflow: hidden;
-        &_the {
-            // margin-top:-61.5vw;
-            // transform: scale(.47);
-            margin-top: -11.5vw + 115/10;
-            z-index: 1;
-            width: 175vw;
-            margin-left: -38.1vw;
-            // border-: 1px red;
-            // margin-top: -50vw;
-            // position: absolute;
-            // opacity: 1;
-            animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
-        }
-        &_show {
-            // transform: scale(.57);
-            height: 47.8vw;
-            width: 47.8vw;
-            margin-left: 25.5vw;
-            // margin-right: 10vw;
-            margin-top: 50vw;
-            // position: relative;
-            z-index: 3;
-            // margin-left: 0vw;
-            // position: absolute;
-            // display: none;
-            // background-color: white;
-            animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
-        }
-        &_friend {
-            // transform: scale(.57);
-            z-index: 2;
-            margin-left: 24.5vw;
-            // margin-right: 5vw;
-            height: 49.55vw;
-            
-            
-            margin-top: 47.25vw;
-            // margin-top: 0.94vw;
-            // position: absolute;
-            
-        }
-    }
-}
 
 
-.spacer{
-    height: 52.03125vw;
-}
+
 .container {
-    // background-color: yellow;
-    height: 52.03125vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     &_outterRing {
-        // margin-top: -23.5vw;
         z-index: 3;
-        // height: ;
-        // border: 10px red;
         & img {
             width: 99vw;
             animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
-            
         }
     }
     &_innerRing {
-        // margin-top: -49.5vw;
-        // margin-left: 25.3vw;
         z-index: 2;
         & img {
             height: 48.5vw;
             animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
-            // width: 47.8vw;
         }
-        
     }
     &_face {
-        // margin-top: -50.95vw;
         z-index: 1;
-        // margin-left: 24.55vw;
         & img {
             height:50vw;
         }
