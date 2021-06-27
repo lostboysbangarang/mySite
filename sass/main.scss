@@ -26,6 +26,15 @@ $darkness: $main;
         transform: rotate(-360deg);
     }
 }
+@keyframes flipBack {
+    0% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+    
+}
 
 
 
@@ -59,8 +68,13 @@ html,body {
 .container {
     overflow: hidden;
     display: flex;
+    // flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    & h1, h2, span {
+        font-weight: normal;
+        transform: scale(-1, 1);
+    }
     &_outterRing {
         z-index: 3;
         & img {
@@ -69,17 +83,83 @@ html,body {
         }
     }
     &_innerRing {
-        z-index: 2;
+        
         & img {
+            z-index: 2;
             height: 48.5vw;
             animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
         }
     }
-    &_face {
-        z-index: 1;
-        & img {
-            height:50vw;
+    &_inner {
+        transition: transform 1000ms;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+        
+        // display: block;
+        // background-color: red;
+        height: 40vw;
+        z-index: 3;
+        &.active{
+            transform: rotateY(180deg);
         }
+    }
+    &_face {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        // position: absolute;
+        // overflow: hidden;
+        clip-path: circle(50%);
+        &_front {
+            & img {
+                height:40vw;
+            }
+            z-index: 3;
+            position: relative;
+            // margin-top: -40vw;
+        }
+        &_back {
+            z-index: 5;
+            // margin-bottom: 40vw;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            // cursor: pointer;
+            // justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            
+            transform: rotateY(180deg);
+            background-color: blue;
+            
+            & .hello {
+                
+                
+                margin-top: 2vw;
+                line-height: 0vw;
+            }
+            & .description {
+                transform: scale(-1, 1);
+                height: 10vw;
+                width: 30vw;
+                margin-top: 7vw;
+                text-align: center;
+                // text-indent: 2vw;
+                font-size: 1.5vw;
+                // background-color: blue;
+                & span:nth-child(2) {
+                    line-height: 10vw;
+                }
+            }
+        }
+        // background-color:  yellow;
+        
+    }
+    & .card {
+        
     }
     
 }

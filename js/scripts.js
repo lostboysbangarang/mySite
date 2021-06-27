@@ -1,6 +1,8 @@
 var ringOne=document.getElementsByClassName("container");
+const back=document.getElementsByClassName("container_inner");
 $(document).ready(function(){
     setRingSize(ringOne);
+    
 });
 var viewPortWidth;
 var viewPortHeight;
@@ -23,7 +25,9 @@ function setRingSize(element) {
         }
     }
 }
-
+function flip() {
+    back[0].classList.toggle("active");
+}
 
 
 
