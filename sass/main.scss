@@ -1,6 +1,6 @@
 $main: #36395B;
 $darkness: $main;
-
+$intro: #616BA8;
 
 
 
@@ -49,7 +49,7 @@ html,body {
     overflow-x: hidden;
     margin: 0px;
     padding: 0px;
-    font-family: 'Montserrat', serif;
+    font-family: "dual300";
     font-weight: 400;
     background-color: color.scale($darkness, $lightness: -10%);
     input:focus, textarea:focus, select:focus {
@@ -79,7 +79,7 @@ html,body {
         z-index: 3;
         & img {
             width: 99vw;
-            animation: rotateRight 60000ms ease-in-out 0ms infinite forwards;
+            animation: rotateRight 120000ms ease-in 0ms infinite forwards;
         }
     }
     &_innerRing {
@@ -87,7 +87,7 @@ html,body {
         & img {
             z-index: 2;
             height: 48.5vw;
-            animation: rotateLeft 60000ms ease-in-out 0ms infinite forwards;
+            animation: rotateLeft 120000ms ease-in 0ms infinite forwards;
         }
     }
     &_inner {
@@ -123,7 +123,7 @@ html,body {
             // margin-bottom: 40vw;
             position: absolute;
             top: 0;
-            height: 100%;
+            height: 40vw;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -133,13 +133,72 @@ html,body {
             transform-style: preserve-3d;
             
             transform: rotateY(180deg);
-            background-color: blue;
+            background-color: $intro;
+            &_container {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                // background-color: rgba(0, 0, 0, 0);
+                animation: rotateRight 120000ms ease-in 0ms infinite forwards;
+                // background-color: red;
+                // transform: rotate(90deg);
+                & .lines {
+                    animation: none;
+                    // border: .125vw solid white;
+                    width: 50% - .25%;
+                    height: 29.5%;
+                    
+                    // transform: rotateY(180deg);
+                    &_1 {
+                        top: 0%;
+                        left: 0%;
+                        border-width: 0vw .125vw .125vw 0vw;
+                        border-style: solid;
+                        border-color: white;
+                        
+                    }
+                    &_2 {
+                        // position: relative;
+                        top: 0%;
+                        right: 0%;
+                        border-width: 0vw 0vw .125vw .125vw;
+                        border-style: solid;
+                        border-color: white;
+                    }
+                    &_3 {
+                        top: 100% - 29.5%;
+                        left: 0%;
+                        border-width: .125vw .125vw 0vw 0vw;
+                        border-style: solid;
+                        border-color: white;
+                        // background-color: yellow;
+                    }
+                    &_4 {
+                        top: 100% - 29.5%;
+                        right: 0%;
+                        border-width: .125vw 0vw 0vw .125vw;
+                        border-style: solid;
+                        border-color: white;
+                        
+                    }
+                }
+            }
+            
             
             & .hello {
-                
-                
-                margin-top: 2vw;
+                // margin-top: 2vw;
                 line-height: 0vw;
+                // border: 1px solid red;
+                // background-color: white;
+                color: white;
+                height: auto;
+                width: auto;
+                top: 45%;
+                z-index: 6;
+                & h1 {
+                    font-family: 'Homemade Apple', cursive;
+                }
+                
             }
             & .description {
                 transform: scale(-1, 1);
