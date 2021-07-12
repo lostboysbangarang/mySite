@@ -139,14 +139,20 @@ html a, body a {
 }
 .container_face_back .hello {
   line-height: 0vw;
+  background-color: transparent;
   color: white;
   height: auto;
-  width: auto;
+  width: 15.625vw;
   top: 45%;
   z-index: 6;
+  font-size: auto;
 }
 .container_face_back .hello h1 {
   font-family: "Homemade Apple", cursive;
+  font-size: 2vw;
+}
+.container_face_back .hello h2 {
+  font-size: 1.25vw;
 }
 .container_face_back .description {
   transform: scale(-1, 1);
